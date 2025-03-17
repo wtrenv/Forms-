@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chain of Custody Form - Modesto Go Green Recycling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11pt;
+            margin: 0;
+            padding: 10px;
+            max-width: 8.5in;
+        }
+        h1 {
+            font-size: 14pt;
+            text-align: center;
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 3px 5px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], input[type="date"], input[type="time"], select {
+            width: 95%;
+            padding: 2px;
+            border: 1px solid #ccc;
+        }
+        input[type="checkbox"] {
+            margin: 0;
+            vertical-align: middle;
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .header-info {
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+        .signature-line {
+            display: inline-block;
+            width: 150px;
+            border-bottom: 1px solid #000;
+            margin-top: 15px;
+        }
+        .print-button {
+            display: none;
+        }
+        @media screen {
+            .print-button {
+                display: block;
+                margin: 10px auto;
+                padding: 5px 10px;
+                background: #0066cc;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CHAIN OF CUSTODY RECORD</h1>
+    <div class="header-info">
+        <strong>Modesto Go Green Recycling</strong> | WDID: 5S50I027417 | 2413 Yosemite Blvd, Modesto, CA 95354 | Phone: (925) 998-6612
+    </div>
+    <div class="header-info">
+        <strong>Laboratory:</strong> SGS | 1135 West Sunset Blvd. STE A, Rocklin, CA 95765 | Phone: (916) 543-4445
+    </div>
+    
+    <table>
+        <tr>
+            <th colspan="7">SAMPLE INFORMATION</th>
+        </tr>
+        <tr>
+            <th>Sample Location</th>
+            <th>Sample ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Matrix</th>
+            <th>Number of Containers</th>
+            <th>Analyses Requested</th>
+        </tr>
+        <tr>
+            <td>SL-001 (SDI-001)</td>
+            <td><input type="text" name="sample_id_1"></td>
+            <td><input type="date" name="date_1"></td>
+            <td><input type="time" name="time_1"></td>
+            <td>Water</td>
+            <td><input type="text" name="containers_1"></td>
+            <td>
+                <label><input type="checkbox" checked> pH</label>
+                <label><input type="checkbox" checked> TSS</label>
+                <label><input type="checkbox" checked> O&G</label><br>
+                <label><input type="checkbox" checked> Fe, Pb, Zn, Al</label>
+                <label><input type="checkbox" checked> COD</label>
+            </td>
+        </tr>
+        <tr>
+            <td>SL-002 (Sheet Flow)</td>
+            <td><input type="text" name="sample_id_2"></td>
+            <td><input type="date" name="date_2"></td>
+            <td><input type="time" name="time_2"></td>
+            <td>Water</td>
+            <td><input type="text" name="containers_2"></td>
+            <td>
+                <label><input type="checkbox" checked> pH</label>
+                <label><input type="checkbox" checked> TSS</label>
+                <label><input type="checkbox" checked> O&G</label><br>
+                <label><input type="checkbox" checked> Fe, Pb, Zn, Al</label>
+                <label><input type="checkbox" checked> COD</label>
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <th colspan="2">SAMPLING INFORMATION</th>
+            <th colspan="3">PRESERVATION & HANDLING</th>
+        </tr>
+        <tr>
+            <td width="15%"><strong>QSE Date:</strong></td>
+            <td width="25%"><input type="date" name="qse_date"></td>
+            <td width="20%"><strong>Preservation:</strong></td>
+            <td width="40%" colspan="2">
+                <label><input type="checkbox" checked> Ice</label>
+                <label><input type="checkbox"> H₂SO₄</label>
+                <label><input type="checkbox"> HNO₃</label>
+                <label><input type="checkbox"> None</label>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Sampler:</strong></td>
+            <td><input type="text" name="sampler"></td>
+            <td><strong>Turn Around:</strong></td>
+            <td colspan="2">
+                <select name="turnaround">
+                    <option>Standard (5 days)</option>
+                    <option>48 Hours</option>
+                    <option>24 Hours</option>
+                    <option>Rush</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Weather:</strong></td>
+            <td><input type="text" name="weather"></td>
+            <td><strong>Special Instructions:</strong></td>
+            <td colspan="2"><input type="text" name="instructions"></td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <th colspan="5">CHAIN OF CUSTODY</th>
+        </tr>
+        <tr>
+            <td colspan="2" width="50%">
+                <strong>RELINQUISHED BY:</strong><br><br>
+                Name: <input type="text" style="width: 70%"><br><br>
+                Company: Modesto Go Green Recycling<br><br>
+                Date: <input type="date" style="width: 40%">
+                Time: <input type="time" style="width: 40%"><br><br>
+                <span class="signature-line"></span><br>
+                Signature
+            </td>
+            <td colspan="3" width="50%">
+                <strong>RECEIVED BY LABORATORY:</strong><br><br>
+                Name: <input type="text" style="width: 70%"><br><br>
+                Company: SGS<br><br>
+                Date: <input type="date" style="width: 40%">
+                Time: <input type="time" style="width: 40%"><br><br>
+                <span class="signature-line"></span><br>
+                Signature
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <th colspan="4">LABORATORY RECEIPT (LAB USE ONLY)</th>
+        </tr>
+        <tr>
+            <td width="25%">
+                <label><input type="checkbox"> Temp °C: ______</label>
+            </td>
+            <td width="25%">
+                <label><input type="checkbox"> Containers Intact</label>
+            </td>
+            <td width="25%">
+                <label><input type="checkbox"> Custody Seals Intact</label>
+            </td>
+            <td width="25%">
+                <label><input type="checkbox"> Correct Preservation</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <strong>Received By:</strong> <input type="text" style="width: 65%">
+            </td>
+            <td colspan="2">
+                <strong>Lab IDs:</strong> <input type="text" style="width: 75%">
+            </td>
+        </tr>
+    </table>
+    
+    <div style="font-size: 8pt; text-align: center; margin-top: 5px;">
+        Form: COC-MGGR-2025 | SWPPP Reference: Section 5.5.8.3 | Page 1 of 1
+    </div>
+    
+    <button class="print-button" onclick="window.print()">Print Form</button>
+</body>
+</html>
