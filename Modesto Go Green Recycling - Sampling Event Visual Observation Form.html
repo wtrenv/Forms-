@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modesto Go Green Recycling - Sampling Event Visual Observation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+        h1, h2, h3 {
+            color: #005a87;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        h1 {
+            font-size: 16pt;
+            text-align: center;
+            border-bottom: 1px solid #005a87;
+            padding-bottom: 5px;
+        }
+        h2 {
+            font-size: 14pt;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+        }
+        h3 {
+            font-size: 12pt;
+        }
+        .header-info {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 11pt;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+        .checkbox-item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-right: 15px;
+            flex: 1;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .form-control {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .certification {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 9pt;
+        }
+        .signature-line {
+            margin-top: 15px;
+            border-top: 1px solid #333;
+            padding-top: 5px;
+            display: inline-block;
+            width: 40%;
+            margin-right: 10%;
+        }
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>MODESTO GO GREEN RECYCLING - SAMPLING EVENT VISUAL OBSERVATION FORM</h1>
+    
+    <div class="header-info">
+        <strong>WDID: 5S50I027417</strong> | <strong>Facility Address:</strong> 2413 Yosemite Blvd, Modesto, CA 95354
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="inspector">Inspector:</label>
+            <input type="text" id="inspector" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" class="form-control">
+        </div>
+    </div>
+    
+    <div class="checkbox-group">
+        <strong>Qualifying Storm Event (QSE):</strong>
+        <div class="checkbox-item">
+            <input type="checkbox" id="discharge" name="qse">
+            <label for="discharge">Discharge from ≥1 drainage area</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="preceded" name="qse">
+            <label for="preceded">Preceded by 48hrs with no discharge</label>
+        </div>
+    </div>
+    
+    <div class="checkbox-group">
+        <strong>Weather Conditions:</strong>
+        <div class="checkbox-item">
+            <input type="checkbox" id="light" name="weather">
+            <label for="light">Light Rain</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="moderate" name="weather">
+            <label for="moderate">Moderate Rain</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="heavy" name="weather">
+            <label for="heavy">Heavy Rain</label>
+        </div>
+        <div class="form-group" style="display: inline-block; width: 150px;">
+            <label for="rainfall">Rainfall Amount:</label>
+            <input type="text" id="rainfall" class="form-control" placeholder="inches">
+        </div>
+    </div>
+    
+    <h2>SAMPLE COLLECTION AND VISUAL OBSERVATIONS</h2>
+    
+    <h3>SAMPLE LOCATION SL-001 (SDI-001)</h3>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="time-collected-1">Time Collected:</label>
+            <input type="time" id="time-collected-1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="sample-id-1">Sample ID:</label>
+            <input type="text" id="sample-id-1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ph-1">pH:</label>
+            <input type="text" id="ph-1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Parameters:</label>
+            <div style="padding-top: 5px;">pH, TSS, O&G, Fe, Pb, Zn, Al, COD</div>
+        </div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th width="20%">Parameter</th>
+                <th width="10%">Present?</th>
+                <th width="35%">Description</th>
+                <th width="35%">Probable Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Floating Materials</td>
+                <td>
+                    <input type="radio" id="floating-y-1" name="floating-1" value="yes">
+                    <label for="floating-y-1">Y</label>
+                    <input type="radio" id="floating-n-1" name="floating-1" value="no">
+                    <label for="floating-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Suspended Materials</td>
+                <td>
+                    <input type="radio" id="suspended-y-1" name="suspended-1" value="yes">
+                    <label for="suspended-y-1">Y</label>
+                    <input type="radio" id="suspended-n-1" name="suspended-1" value="no">
+                    <label for="suspended-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Oil & Grease</td>
+                <td>
+                    <input type="radio" id="oil-y-1" name="oil-1" value="yes">
+                    <label for="oil-y-1">Y</label>
+                    <input type="radio" id="oil-n-1" name="oil-1" value="no">
+                    <label for="oil-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Discoloration</td>
+                <td>
+                    <input type="radio" id="discolor-y-1" name="discolor-1" value="yes">
+                    <label for="discolor-y-1">Y</label>
+                    <input type="radio" id="discolor-n-1" name="discolor-1" value="no">
+                    <label for="discolor-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Turbidity</td>
+                <td>
+                    <input type="radio" id="turbidity-y-1" name="turbidity-1" value="yes">
+                    <label for="turbidity-y-1">Y</label>
+                    <input type="radio" id="turbidity-n-1" name="turbidity-1" value="no">
+                    <label for="turbidity-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Odor</td>
+                <td>
+                    <input type="radio" id="odor-y-1" name="odor-1" value="yes">
+                    <label for="odor-y-1">Y</label>
+                    <input type="radio" id="odor-n-1" name="odor-1" value="no">
+                    <label for="odor-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Trash/Debris</td>
+                <td>
+                    <input type="radio" id="trash-y-1" name="trash-1" value="yes">
+                    <label for="trash-y-1">Y</label>
+                    <input type="radio" id="trash-n-1" name="trash-1" value="no">
+                    <label for="trash-n-1">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="form-row">
+        <div class="form-group" style="flex: 2;">
+            <label>Flow Characteristics:</label>
+            <div class="checkbox-item">
+                <input type="radio" id="slow-1" name="flow-1" value="slow">
+                <label for="slow-1">Slow</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="moderate-1" name="flow-1" value="moderate">
+                <label for="moderate-1">Moderate</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="fast-1" name="flow-1" value="fast">
+                <label for="fast-1">Fast</label>
+            </div>
+        </div>
+        <div class="form-group" style="flex: 3;">
+            <label for="actions-1">Required Actions:</label>
+            <input type="text" id="actions-1" class="form-control">
+        </div>
+    </div>
+    
+    <h3>SAMPLE LOCATION SL-002 (Sheet Flow from DA-003)</h3>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="time-collected-2">Time Collected:</label>
+            <input type="time" id="time-collected-2" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="sample-id-2">Sample ID:</label>
+            <input type="text" id="sample-id-2" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ph-2">pH:</label>
+            <input type="text" id="ph-2" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Parameters:</label>
+            <div style="padding-top: 5px;">pH, TSS, O&G, Fe, Pb, Zn, Al, COD</div>
+        </div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th width="20%">Parameter</th>
+                <th width="10%">Present?</th>
+                <th width="35%">Description</th>
+                <th width="35%">Probable Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Floating Materials</td>
+                <td>
+                    <input type="radio" id="floating-y-2" name="floating-2" value="yes">
+                    <label for="floating-y-2">Y</label>
+                    <input type="radio" id="floating-n-2" name="floating-2" value="no">
+                    <label for="floating-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Suspended Materials</td>
+                <td>
+                    <input type="radio" id="suspended-y-2" name="suspended-2" value="yes">
+                    <label for="suspended-y-2">Y</label>
+                    <input type="radio" id="suspended-n-2" name="suspended-2" value="no">
+                    <label for="suspended-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Oil & Grease</td>
+                <td>
+                    <input type="radio" id="oil-y-2" name="oil-2" value="yes">
+                    <label for="oil-y-2">Y</label>
+                    <input type="radio" id="oil-n-2" name="oil-2" value="no">
+                    <label for="oil-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Discoloration</td>
+                <td>
+                    <input type="radio" id="discolor-y-2" name="discolor-2" value="yes">
+                    <label for="discolor-y-2">Y</label>
+                    <input type="radio" id="discolor-n-2" name="discolor-2" value="no">
+                    <label for="discolor-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Turbidity</td>
+                <td>
+                    <input type="radio" id="turbidity-y-2" name="turbidity-2" value="yes">
+                    <label for="turbidity-y-2">Y</label>
+                    <input type="radio" id="turbidity-n-2" name="turbidity-2" value="no">
+                    <label for="turbidity-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Odor</td>
+                <td>
+                    <input type="radio" id="odor-y-2" name="odor-2" value="yes">
+                    <label for="odor-y-2">Y</label>
+                    <input type="radio" id="odor-n-2" name="odor-2" value="no">
+                    <label for="odor-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Trash/Debris</td>
+                <td>
+                    <input type="radio" id="trash-y-2" name="trash-2" value="yes">
+                    <label for="trash-y-2">Y</label>
+                    <input type="radio" id="trash-n-2" name="trash-2" value="no">
+                    <label for="trash-n-2">N</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="form-row">
+        <div class="form-group" style="flex: 2;">
+            <label>Flow Characteristics:</label>
+            <div class="checkbox-item">
+                <input type="radio" id="slow-2" name="flow-2" value="slow">
+                <label for="slow-2">Slow</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="moderate-2" name="flow-2" value="moderate">
+                <label for="moderate-2">Moderate</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="fast-2" name="flow-2" value="fast">
+                <label for="fast-2">Fast</label>
+            </div>
+        </div>
+        <div class="form-group" style="flex: 3;">
+            <label for="actions-2">Required Actions:</label>
+            <input type="text" id="actions-2" class="form-control">
+        </div>
+    </div>
+    
+    <h2>BMP EFFECTIVENESS & INDUSTRIAL AREAS OBSERVATIONS</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th width="30%">Area/BMP</th>
+                <th width="15%">Effective?</th>
+                <th width="55%">Issues/Actions Needed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Good Housekeeping</td>
+                <td>
+                    <input type="radio" id="housekeeping-y" name="housekeeping" value="yes">
+                    <label for="housekeeping-y">Y</label>
+                    <input type="radio" id="housekeeping-n" name="housekeeping" value="no">
+                    <label for="housekeeping-n">N</label>
+                    <input type="radio" id="housekeeping-na" name="housekeeping" value="na">
+                    <label for="housekeeping-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Preventative Maintenance</td>
+                <td>
+                    <input type="radio" id="maintenance-y" name="maintenance" value="yes">
+                    <label for="maintenance-y">Y</label>
+                    <input type="radio" id="maintenance-n" name="maintenance" value="no">
+                    <label for="maintenance-n">N</label>
+                    <input type="radio" id="maintenance-na" name="maintenance" value="na">
+                    <label for="maintenance-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Spill Prevention/Response</td>
+                <td>
+                    <input type="radio" id="spill-y" name="spill" value="yes">
+                    <label for="spill-y">Y</label>
+                    <input type="radio" id="spill-n" name="spill" value="no">
+                    <label for="spill-n">N</label>
+                    <input type="radio" id="spill-na" name="spill" value="na">
+                    <label for="spill-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Material Handling/Storage</td>
+                <td>
+                    <input type="radio" id="material-y" name="material" value="yes">
+                    <label for="material-y">Y</label>
+                    <input type="radio" id="material-n" name="material" value="no">
+                    <label for="material-n">N</label>
+                    <input type="radio" id="material-na" name="material" value="na">
+                    <label for="material-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Erosion/Sediment Controls</td>
+                <td>
+                    <input type="radio" id="erosion-y" name="erosion" value="yes">
+                    <label for="erosion-y">Y</label>
+                    <input type="radio" id="erosion-n" name="erosion" value="no">
+                    <label for="erosion-n">N</label>
+                    <input type="radio" id="erosion-na" name="erosion" value="na">
+                    <label for="erosion-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Receiving/Sorting Shelter</td>
+                <td>
+                    <input type="radio" id="shelter-y" name="shelter" value="yes">
+                    <label for="shelter-y">Y</label>
+                    <input type="radio" id="shelter-n" name="shelter" value="no">
+                    <label for="shelter-n">N</label>
+                    <input type="radio" id="shelter-na" name="shelter" value="na">
+                    <label for="shelter-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Customer Parking/Unloading</td>
+                <td>
+                    <input type="radio" id="parking-y" name="parking" value="yes">
+                    <label for="parking-y">Y</label>
+                    <input type="radio" id="parking-n" name="parking" value="no">
+                    <label for="parking-n">N</label>
+                    <input type="radio" id="parking-na" name="parking" value="na">
+                    <label for="parking-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Receiving & Processing Area</td>
+                <td>
+                    <input type="radio" id="receiving-y" name="receiving" value="yes">
+                    <label for="receiving-y">Y</label>
+                    <input type="radio" id="receiving-n" name="receiving" value="no">
+                    <label for="receiving-n">N</label>
+                    <input type="radio" id="receiving-na" name="receiving" value="na">
+                    <label for="receiving-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Storage Areas</td>
+                <td>
+                    <input type="radio" id="storage-y" name="storage" value="yes">
+                    <label for="storage-y">Y</label>
+                    <input type="radio" id="storage-n" name="storage" value="no">
+                    <label for="storage-n">N</label>
+                    <input type="radio" id="storage-na" name="storage" value="na">
+                    <label for="storage-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Shipping Areas</td>
+                <td>
+                    <input type="radio" id="shipping-y" name="shipping" value="yes">
+                    <label for="shipping-y">Y</label>
+                    <input type="radio" id="shipping-n" name="shipping" value="no">
+                    <label for="shipping-n">N</label>
+                    <input type="radio" id="shipping-na" name="shipping" value="na">
+                    <label for="shipping-na">NA</label>
+                </td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label>Chain of Custody Completed:</label>
+            <div class="checkbox-item">
+                <input type="radio" id="coc-yes" name="coc" value="yes">
+                <label for="coc-yes">Yes</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="coc-no" name="coc" value="no">
+                <label for="coc-no">No</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Sample Delivery Method:</label>
+            <div class="checkbox-item">
+                <input type="radio" id="delivery-lab" name="delivery" value="lab">
+                <label for="delivery-lab">Lab Courier</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="delivery-staff" name="delivery" value="staff">
+                <label for="delivery-staff">Staff Delivery</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="radio" id="delivery-shipping" name="delivery" value="shipping">
+                <label for="delivery-shipping">Shipping</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" class="form-control" rows="3" style="width: 100%;"></textarea>
+    </div>
+    
+    <div class="certification">
+        <p>I certify under penalty of law that this document and all attachments were prepared under my direction or supervision in accordance with a system designed to ensure that qualified personnel properly gather and evaluate the information submitted. Based on my inquiry of the person or persons who manage the system, or those persons directly responsible for gathering the information, the information submitted is, to the best of my knowledge and belief, true, accurate, and complete. I am aware that there are significant penalties for submitting false information, including the possibility of fine and imprisonment for knowing violations.</p>
+        
+        <div style="margin-top: 20px;">
+            <span class="signature-line">Inspector Signature</span>
+            <span class="signature-line">Date</span>
+        </div>
+    </div>
+    
+    <div class="no-print" style="margin-top: 20px; text-align: center;">
+        <button onclick="window.print();" style="padding: 8px 16px; background-color: #005a87; color: white; border: none; border-radius: 4px; cursor: pointer;">Print Form</button>
+    </div>
+</body>
+</html>
