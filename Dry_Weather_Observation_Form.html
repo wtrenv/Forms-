@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MODESTO GO GREEN RECYCLING - MONTHLY DRY WEATHER VISUAL OBSERVATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.4em;
+        }
+        h1, h2, h3 {
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 300px;
+            padding: 4px;
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            vertical-align: middle;
+        }
+        .checkbox-group, .radio-group {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 4px;
+        }
+        .small-input {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>MODESTO GO GREEN RECYCLING - MONTHLY DRY WEATHER VISUAL OBSERVATION</h1>
+
+<form>
+    <p><strong>WDID:</strong> 5S50I027417 &nbsp;|&nbsp; <strong>Address:</strong> 2413 Yosemite Blvd, Modesto, CA 95354</p>
+    
+    <p>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date">
+    </p>
+
+    <p>
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time">
+    </p>
+
+    <p><strong>Weather:</strong></p>
+    <div class="checkbox-group">
+        <input type="checkbox" id="clear" name="weather" value="Clear">
+        <label for="clear">Clear</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="partlyCloudy" name="weather" value="Partly Cloudy">
+        <label for="partlyCloudy">Partly Cloudy</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="overcast" name="weather" value="Overcast">
+        <label for="overcast">Overcast</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="otherWeather" name="weather" value="Other">
+        <label for="otherWeather">Other:</label>
+        <input type="text" id="otherWeatherText" name="otherWeatherText" placeholder="Specify">
+    </div>
+
+    <p>
+        <label for="daysSinceRain">Days Since Last Rain:</label><br>
+        <input type="number" id="daysSinceRain" name="daysSinceRain" class="small-input" min="0">
+    </p>
+
+    <p>
+        <label for="inspector">Inspector:</label><br>
+        <input type="text" id="inspector" name="inspector" placeholder="Name">
+    </p>
+
+    <p>
+        <label for="inspectorTitle">Title:</label><br>
+        <input type="text" id="inspectorTitle" name="inspectorTitle" placeholder="Title/Position">
+    </p>
+
+    <!-- DRAINAGE AREA OBSERVATIONS -->
+
+    <h2>Drainage Area Observations</h2>
+
+    <!-- DA-001 (Main Facility Area) -->
+    <h3>DA-001 (Main Facility Area)</h3>
+
+    <p><strong>Activities Present:</strong></p>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da001_unloading" name="da001_activities" value="Unloading/Sorting">
+        <label for="da001_unloading">Unloading/Sorting</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da001_receiving" name="da001_activities" value="Receiving">
+        <label for="da001_receiving">Receiving</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da001_storage" name="da001_activities" value="Storage">
+        <label for="da001_storage">Storage</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da001_loading" name="da001_activities" value="Loading">
+        <label for="da001_loading">Loading</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da001_other" name="da001_activities" value="Other">
+        <label for="da001_other">Other:</label>
+        <input type="text" name="da001_other_detail" placeholder="Specify">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Potential Issue</th>
+                <th>Present?</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Corrective Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spills/Leaks</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_spills_yes" name="da001_spills" value="Yes">
+                        <label for="da001_spills_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_spills_no" name="da001_spills" value="No" checked>
+                        <label for="da001_spills_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_spills_location"></td>
+                <td><input type="text" name="da001_spills_description"></td>
+                <td><input type="text" name="da001_spills_corrective"></td>
+            </tr>
+            <tr>
+                <td>Trash/Debris</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_trash_yes" name="da001_trash" value="Yes">
+                        <label for="da001_trash_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_trash_no" name="da001_trash" value="No" checked>
+                        <label for="da001_trash_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_trash_location"></td>
+                <td><input type="text" name="da001_trash_description"></td>
+                <td><input type="text" name="da001_trash_corrective"></td>
+            </tr>
+            <tr>
+                <td>Tracking of Materials</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_tracking_yes" name="da001_tracking" value="Yes">
+                        <label for="da001_tracking_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_tracking_no" name="da001_tracking" value="No" checked>
+                        <label for="da001_tracking_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_tracking_location"></td>
+                <td><input type="text" name="da001_tracking_description"></td>
+                <td><input type="text" name="da001_tracking_corrective"></td>
+            </tr>
+            <tr>
+                <td>Unauthorized NSWDs</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_unauth_yes" name="da001_unauth" value="Yes">
+                        <label for="da001_unauth_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_unauth_no" name="da001_unauth" value="No" checked>
+                        <label for="da001_unauth_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_unauth_location"></td>
+                <td><input type="text" name="da001_unauth_description"></td>
+                <td><input type="text" name="da001_unauth_corrective"></td>
+            </tr>
+            <tr>
+                <td>Authorized NSWDs</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_auth_yes" name="da001_auth" value="Yes">
+                        <label for="da001_auth_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_auth_no" name="da001_auth" value="No" checked>
+                        <label for="da001_auth_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_auth_location"></td>
+                <td><input type="text" name="da001_auth_description"></td>
+                <td><input type="text" name="da001_auth_corrective"></td>
+            </tr>
+            <tr>
+                <td>BMP Maintenance Needed</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_bmp_yes" name="da001_bmp" value="Yes">
+                        <label for="da001_bmp_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_bmp_no" name="da001_bmp" value="No" checked>
+                        <label for="da001_bmp_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_bmp_location"></td>
+                <td><input type="text" name="da001_bmp_description"></td>
+                <td><input type="text" name="da001_bmp_corrective"></td>
+            </tr>
+            <tr>
+                <td>Particulate Matter</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_particulate_yes" name="da001_particulate" value="Yes">
+                        <label for="da001_particulate_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_particulate_no" name="da001_particulate" value="No" checked>
+                        <label for="da001_particulate_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_particulate_location"></td>
+                <td><input type="text" name="da001_particulate_description"></td>
+                <td><input type="text" name="da001_particulate_corrective"></td>
+            </tr>
+            <tr>
+                <td>Oil/Lubricants</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_oil_yes" name="da001_oil" value="Yes">
+                        <label for="da001_oil_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da001_oil_no" name="da001_oil" value="No" checked>
+                        <label for="da001_oil_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da001_oil_location"></td>
+                <td><input type="text" name="da001_oil_description"></td>
+                <td><input type="text" name="da001_oil_corrective"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <strong>SDI-001 Condition:</strong><br>
+        <div class="radio-group">
+            <input type="radio" id="sdi001_good" name="sdi001_condition" value="Good" checked>
+            <label for="sdi001_good">Good</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="sdi001_fair" name="sdi001_condition" value="Fair">
+            <label for="sdi001_fair">Fair</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="sdi001_poor" name="sdi001_condition" value="Poor">
+            <label for="sdi001_poor">Poor</label>
+        </div>
+    </p>
+    <p>
+        <label for="sdi001_notes">Notes:</label><br>
+        <textarea id="sdi001_notes" name="sdi001_notes" rows="2" cols="50" placeholder="Any additional details..."></textarea>
+    </p>
+
+    <!-- DA-002 (Eastern/Northeastern Area) -->
+    <h3>DA-002 (Eastern/Northeastern Area)</h3>
+
+    <p><strong>Activities Present:</strong></p>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da002_storage" name="da002_activities" value="Storage">
+        <label for="da002_storage">Storage</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da002_loading" name="da002_activities" value="Loading">
+        <label for="da002_loading">Loading</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da002_other" name="da002_activities" value="Other">
+        <label for="da002_other">Other:</label>
+        <input type="text" name="da002_other_detail" placeholder="Specify">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Potential Issue</th>
+                <th>Present?</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Corrective Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spills/Leaks</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_spills_yes" name="da002_spills" value="Yes">
+                        <label for="da002_spills_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_spills_no" name="da002_spills" value="No" checked>
+                        <label for="da002_spills_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_spills_location"></td>
+                <td><input type="text" name="da002_spills_description"></td>
+                <td><input type="text" name="da002_spills_corrective"></td>
+            </tr>
+            <tr>
+                <td>Trash/Debris</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_trash_yes" name="da002_trash" value="Yes">
+                        <label for="da002_trash_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_trash_no" name="da002_trash" value="No" checked>
+                        <label for="da002_trash_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_trash_location"></td>
+                <td><input type="text" name="da002_trash_description"></td>
+                <td><input type="text" name="da002_trash_corrective"></td>
+            </tr>
+            <tr>
+                <td>Tracking of Materials</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_tracking_yes" name="da002_tracking" value="Yes">
+                        <label for="da002_tracking_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_tracking_no" name="da002_tracking" value="No" checked>
+                        <label for="da002_tracking_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_tracking_location"></td>
+                <td><input type="text" name="da002_tracking_description"></td>
+                <td><input type="text" name="da002_tracking_corrective"></td>
+            </tr>
+            <tr>
+                <td>Unauthorized NSWDs</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_unauth_yes" name="da002_unauth" value="Yes">
+                        <label for="da002_unauth_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_unauth_no" name="da002_unauth" value="No" checked>
+                        <label for="da002_unauth_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_unauth_location"></td>
+                <td><input type="text" name="da002_unauth_description"></td>
+                <td><input type="text" name="da002_unauth_corrective"></td>
+            </tr>
+            <tr>
+                <td>Authorized NSWDs</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_auth_yes" name="da002_auth" value="Yes">
+                        <label for="da002_auth_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_auth_no" name="da002_auth" value="No" checked>
+                        <label for="da002_auth_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_auth_location"></td>
+                <td><input type="text" name="da002_auth_description"></td>
+                <td><input type="text" name="da002_auth_corrective"></td>
+            </tr>
+            <tr>
+                <td>BMP Maintenance Needed</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_bmp_yes" name="da002_bmp" value="Yes">
+                        <label for="da002_bmp_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_bmp_no" name="da002_bmp" value="No" checked>
+                        <label for="da002_bmp_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_bmp_location"></td>
+                <td><input type="text" name="da002_bmp_description"></td>
+                <td><input type="text" name="da002_bmp_corrective"></td>
+            </tr>
+            <tr>
+                <td>Particulate Matter</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_particulate_yes" name="da002_particulate" value="Yes">
+                        <label for="da002_particulate_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_particulate_no" name="da002_particulate" value="No" checked>
+                        <label for="da002_particulate_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_particulate_location"></td>
+                <td><input type="text" name="da002_particulate_description"></td>
+                <td><input type="text" name="da002_particulate_corrective"></td>
+            </tr>
+            <tr>
+                <td>Oil/Lubricants</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_oil_yes" name="da002_oil" value="Yes">
+                        <label for="da002_oil_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da002_oil_no" name="da002_oil" value="No" checked>
+                        <label for="da002_oil_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da002_oil_location"></td>
+                <td><input type="text" name="da002_oil_description"></td>
+                <td><input type="text" name="da002_oil_corrective"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <strong>SDI-002 Condition:</strong><br>
+        <div class="radio-group">
+            <input type="radio" id="sdi002_good" name="sdi002_condition" value="Good" checked>
+            <label for="sdi002_good">Good</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="sdi002_fair" name="sdi002_condition" value="Fair">
+            <label for="sdi002_fair">Fair</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="sdi002_poor" name="sdi002_condition" value="Poor">
+            <label for="sdi002_poor">Poor</label>
+        </div>
+    </p>
+    <p>
+        <label for="sdi002_notes">Notes:</label><br>
+        <textarea id="sdi002_notes" name="sdi002_notes" rows="2" cols="50" placeholder="Any additional details..."></textarea>
+    </p>
+
+    <!-- DA-003 (Northwest Corner - Unpaved Area) -->
+    <h3>DA-003 (Northwest Corner - Unpaved Area)</h3>
+
+    <p><strong>Activities Present:</strong></p>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da003_storage" name="da003_activities" value="Storage">
+        <label for="da003_storage">Storage</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da003_loading" name="da003_activities" value="Loading">
+        <label for="da003_loading">Loading</label>
+    </div>
+    <div class="checkbox-group">
+        <input type="checkbox" id="da003_other" name="da003_activities" value="Other">
+        <label for="da003_other">Other:</label>
+        <input type="text" name="da003_other_detail" placeholder="Specify">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Potential Issue</th>
+                <th>Present?</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Corrective Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spills/Leaks</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_spills_yes" name="da003_spills" value="Yes">
+                        <label for="da003_spills_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_spills_no" name="da003_spills" value="No" checked>
+                        <label for="da003_spills_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_spills_location"></td>
+                <td><input type="text" name="da003_spills_description"></td>
+                <td><input type="text" name="da003_spills_corrective"></td>
+            </tr>
+            <tr>
+                <td>Trash/Debris</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_trash_yes" name="da003_trash" value="Yes">
+                        <label for="da003_trash_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_trash_no" name="da003_trash" value="No" checked>
+                        <label for="da003_trash_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_trash_location"></td>
+                <td><input type="text" name="da003_trash_description"></td>
+                <td><input type="text" name="da003_trash_corrective"></td>
+            </tr>
+            <tr>
+                <td>Tracking of Materials</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_tracking_yes" name="da003_tracking" value="Yes">
+                        <label for="da003_tracking_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_tracking_no" name="da003_tracking" value="No" checked>
+                        <label for="da003_tracking_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_tracking_location"></td>
+                <td><input type="text" name="da003_tracking_description"></td>
+                <td><input type="text" name="da003_tracking_corrective"></td>
+            </tr>
+            <tr>
+                <td>Unauthorized NSWDs</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_unauth_yes" name="da003_unauth" value="Yes">
+                        <label for="da003_unauth_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_unauth_no" name="da003_unauth" value="No" checked>
+                        <label for="da003_unauth_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_unauth_location"></td>
+                <td><input type="text" name="da003_unauth_description"></td>
+                <td><input type="text" name="da003_unauth_corrective"></td>
+            </tr>
+            <tr>
+                <td>Erosion/Sedimentation</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_erosion_yes" name="da003_erosion" value="Yes">
+                        <label for="da003_erosion_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_erosion_no" name="da003_erosion" value="No" checked>
+                        <label for="da003_erosion_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_erosion_location"></td>
+                <td><input type="text" name="da003_erosion_description"></td>
+                <td><input type="text" name="da003_erosion_corrective"></td>
+            </tr>
+            <tr>
+                <td>BMP Maintenance Needed</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_bmp_yes" name="da003_bmp" value="Yes">
+                        <label for="da003_bmp_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_bmp_no" name="da003_bmp" value="No" checked>
+                        <label for="da003_bmp_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_bmp_location"></td>
+                <td><input type="text" name="da003_bmp_description"></td>
+                <td><input type="text" name="da003_bmp_corrective"></td>
+            </tr>
+            <tr>
+                <td>Particulate Matter</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_particulate_yes" name="da003_particulate" value="Yes">
+                        <label for="da003_particulate_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_particulate_no" name="da003_particulate" value="No" checked>
+                        <label for="da003_particulate_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_particulate_location"></td>
+                <td><input type="text" name="da003_particulate_description"></td>
+                <td><input type="text" name="da003_particulate_corrective"></td>
+            </tr>
+            <tr>
+                <td>Oil/Lubricants</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_oil_yes" name="da003_oil" value="Yes">
+                        <label for="da003_oil_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="da003_oil_no" name="da003_oil" value="No" checked>
+                        <label for="da003_oil_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="da003_oil_location"></td>
+                <td><input type="text" name="da003_oil_description"></td>
+                <td><input type="text" name="da003_oil_corrective"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- BMP IMPLEMENTATION CHECKLIST -->
+    <h2>BMP Implementation Checklist</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>BMP</th>
+                <th>Implemented?</th>
+                <th>Maintained?</th>
+                <th>Action Needed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Good Housekeeping - Areas free of trash/debris</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_aftd_yes" name="gh_aftd_impl" value="Yes">
+                        <label for="gh_aftd_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_aftd_no" name="gh_aftd_impl" value="No">
+                        <label for="gh_aftd_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_aftd_na" name="gh_aftd_impl" value="NA" checked>
+                        <label for="gh_aftd_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_aftd_yes_m" name="gh_aftd_maint" value="Yes">
+                        <label for="gh_aftd_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_aftd_no_m" name="gh_aftd_maint" value="No">
+                        <label for="gh_aftd_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_aftd_na_m" name="gh_aftd_maint" value="NA" checked>
+                        <label for="gh_aftd_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="gh_aftd_action"></td>
+            </tr>
+            <tr>
+                <td>Good Housekeeping - Materials properly stored</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mps_yes" name="gh_mps_impl" value="Yes">
+                        <label for="gh_mps_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mps_no" name="gh_mps_impl" value="No">
+                        <label for="gh_mps_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mps_na" name="gh_mps_impl" value="NA" checked>
+                        <label for="gh_mps_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mps_yes_m" name="gh_mps_maint" value="Yes">
+                        <label for="gh_mps_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mps_no_m" name="gh_mps_maint" value="No">
+                        <label for="gh_mps_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mps_na_m" name="gh_mps_maint" value="NA" checked>
+                        <label for="gh_mps_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="gh_mps_action"></td>
+            </tr>
+            <tr>
+                <td>Good Housekeeping - Minimized material tracking</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mmt_yes" name="gh_mmt_impl" value="Yes">
+                        <label for="gh_mmt_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mmt_no" name="gh_mmt_impl" value="No">
+                        <label for="gh_mmt_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mmt_na" name="gh_mmt_impl" value="NA" checked>
+                        <label for="gh_mmt_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mmt_yes_m" name="gh_mmt_maint" value="Yes">
+                        <label for="gh_mmt_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mmt_no_m" name="gh_mmt_maint" value="No">
+                        <label for="gh_mmt_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mmt_na_m" name="gh_mmt_maint" value="NA" checked>
+                        <label for="gh_mmt_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="gh_mmt_action"></td>
+            </tr>
+            <tr>
+                <td>Good Housekeeping - Minimized dust generation</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mdg_yes" name="gh_mdg_impl" value="Yes">
+                        <label for="gh_mdg_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mdg_no" name="gh_mdg_impl" value="No">
+                        <label for="gh_mdg_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mdg_na" name="gh_mdg_impl" value="NA" checked>
+                        <label for="gh_mdg_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mdg_yes_m" name="gh_mdg_maint" value="Yes">
+                        <label for="gh_mdg_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mdg_no_m" name="gh_mdg_maint" value="No">
+                        <label for="gh_mdg_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gh_mdg_na_m" name="gh_mdg_maint" value="NA" checked>
+                        <label for="gh_mdg_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="gh_mdg_action"></td>
+            </tr>
+            <tr>
+                <td>Preventative Maintenance - Storm drain inlets maintained</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_sdim_yes" name="pm_sdim_impl" value="Yes">
+                        <label for="pm_sdim_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_sdim_no" name="pm_sdim_impl" value="No">
+                        <label for="pm_sdim_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_sdim_na" name="pm_sdim_impl" value="NA" checked>
+                        <label for="pm_sdim_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_sdim_yes_m" name="pm_sdim_maint" value="Yes">
+                        <label for="pm_sdim_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_sdim_no_m" name="pm_sdim_maint" value="No">
+                        <label for="pm_sdim_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_sdim_na_m" name="pm_sdim_maint" value="NA" checked>
+                        <label for="pm_sdim_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="pm_sdim_action"></td>
+            </tr>
+            <tr>
+                <td>Preventative Maintenance - Equipment inspected for leaks</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_eifl_yes" name="pm_eifl_impl" value="Yes">
+                        <label for="pm_eifl_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_eifl_no" name="pm_eifl_impl" value="No">
+                        <label for="pm_eifl_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_eifl_na" name="pm_eifl_impl" value="NA" checked>
+                        <label for="pm_eifl_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_eifl_yes_m" name="pm_eifl_maint" value="Yes">
+                        <label for="pm_eifl_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_eifl_no_m" name="pm_eifl_maint" value="No">
+                        <label for="pm_eifl_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pm_eifl_na_m" name="pm_eifl_maint" value="NA" checked>
+                        <label for="pm_eifl_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="pm_eifl_action"></td>
+            </tr>
+            <tr>
+                <td>Spill Prevention &amp; Response - Spill materials available</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_sma_yes" name="spr_sma_impl" value="Yes">
+                        <label for="spr_sma_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_sma_no" name="spr_sma_impl" value="No">
+                        <label for="spr_sma_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_sma_na" name="spr_sma_impl" value="NA" checked>
+                        <label for="spr_sma_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_sma_yes_m" name="spr_sma_maint" value="Yes">
+                        <label for="spr_sma_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_sma_no_m" name="spr_sma_maint" value="No">
+                        <label for="spr_sma_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_sma_na_m" name="spr_sma_maint" value="NA" checked>
+                        <label for="spr_sma_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="spr_sma_action"></td>
+            </tr>
+            <tr>
+                <td>Spill Prevention &amp; Response - Drip pans used where needed</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_dp_yes" name="spr_dp_impl" value="Yes">
+                        <label for="spr_dp_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_dp_no" name="spr_dp_impl" value="No">
+                        <label for="spr_dp_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_dp_na" name="spr_dp_impl" value="NA" checked>
+                        <label for="spr_dp_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_dp_yes_m" name="spr_dp_maint" value="Yes">
+                        <label for="spr_dp_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_dp_no_m" name="spr_dp_maint" value="No">
+                        <label for="spr_dp_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_dp_na_m" name="spr_dp_maint" value="NA" checked>
+                        <label for="spr_dp_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="spr_dp_action"></td>
+            </tr>
+            <tr>
+                <td>Spill Prevention &amp; Response - No visible spills/stains</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_nvss_yes" name="spr_nvss_impl" value="Yes">
+                        <label for="spr_nvss_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_nvss_no" name="spr_nvss_impl" value="No">
+                        <label for="spr_nvss_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_nvss_na" name="spr_nvss_impl" value="NA" checked>
+                        <label for="spr_nvss_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_nvss_yes_m" name="spr_nvss_maint" value="Yes">
+                        <label for="spr_nvss_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_nvss_no_m" name="spr_nvss_maint" value="No">
+                        <label for="spr_nvss_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="spr_nvss_na_m" name="spr_nvss_maint" value="NA" checked>
+                        <label for="spr_nvss_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="spr_nvss_action"></td>
+            </tr>
+            <tr>
+                <td>Material Handling &amp; Waste - Covered storage where required</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_csw_yes" name="mhw_csw_impl" value="Yes">
+                        <label for="mhw_csw_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_csw_no" name="mhw_csw_impl" value="No">
+                        <label for="mhw_csw_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_csw_na" name="mhw_csw_impl" value="NA" checked>
+                        <label for="mhw_csw_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_csw_yes_m" name="mhw_csw_maint" value="Yes">
+                        <label for="mhw_csw_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_csw_no_m" name="mhw_csw_maint" value="No">
+                        <label for="mhw_csw_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_csw_na_m" name="mhw_csw_maint" value="NA" checked>
+                        <label for="mhw_csw_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="mhw_csw_action"></td>
+            </tr>
+            <tr>
+                <td>Material Handling &amp; Waste - Secondary containment intact</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_sci_yes" name="mhw_sci_impl" value="Yes">
+                        <label for="mhw_sci_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_sci_no" name="mhw_sci_impl" value="No">
+                        <label for="mhw_sci_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_sci_na" name="mhw_sci_impl" value="NA" checked>
+                        <label for="mhw_sci_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_sci_yes_m" name="mhw_sci_maint" value="Yes">
+                        <label for="mhw_sci_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_sci_no_m" name="mhw_sci_maint" value="No">
+                        <label for="mhw_sci_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_sci_na_m" name="mhw_sci_maint" value="NA" checked>
+                        <label for="mhw_sci_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="mhw_sci_action"></td>
+            </tr>
+            <tr>
+                <td>Material Handling &amp; Waste - Waste containers closed</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_wcc_yes" name="mhw_wcc_impl" value="Yes">
+                        <label for="mhw_wcc_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_wcc_no" name="mhw_wcc_impl" value="No">
+                        <label for="mhw_wcc_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_wcc_na" name="mhw_wcc_impl" value="NA" checked>
+                        <label for="mhw_wcc_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_wcc_yes_m" name="mhw_wcc_maint" value="Yes">
+                        <label for="mhw_wcc_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_wcc_no_m" name="mhw_wcc_maint" value="No">
+                        <label for="mhw_wcc_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="mhw_wcc_na_m" name="mhw_wcc_maint" value="NA" checked>
+                        <label for="mhw_wcc_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="mhw_wcc_action"></td>
+            </tr>
+            <tr>
+                <td>Erosion &amp; Sediment Controls - Unpaved areas show no erosion</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="esc_uasne_yes" name="esc_uasne_impl" value="Yes">
+                        <label for="esc_uasne_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="esc_uasne_no" name="esc_uasne_impl" value="No">
+                        <label for="esc_uasne_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="esc_uasne_na" name="esc_uasne_impl" value="NA" checked>
+                        <label for="esc_uasne_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="esc_uasne_yes_m" name="esc_uasne_maint" value="Yes">
+                        <label for="esc_uasne_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="esc_uasne_no_m" name="esc_uasne_maint" value="No">
+                        <label for="esc_uasne_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="esc_uasne_na_m" name="esc_uasne_maint" value="NA" checked>
+                        <label for="esc_uasne_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="esc_uasne_action"></td>
+            </tr>
+            <tr>
+                <td>Advanced BMPs - Receiving/sorting shelter intact</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="abm_rssi_yes" name="abm_rssi_impl" value="Yes">
+                        <label for="abm_rssi_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="abm_rssi_no" name="abm_rssi_impl" value="No">
+                        <label for="abm_rssi_no">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="abm_rssi_na" name="abm_rssi_impl" value="NA" checked>
+                        <label for="abm_rssi_na">NA</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="abm_rssi_yes_m" name="abm_rssi_maint" value="Yes">
+                        <label for="abm_rssi_yes_m">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="abm_rssi_no_m" name="abm_rssi_maint" value="No">
+                        <label for="abm_rssi_no_m">N</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="abm_rssi_na_m" name="abm_rssi_maint" value="NA" checked>
+                        <label for="abm_rssi_na_m">NA</label>
+                    </div>
+                </td>
+                <td><input type="text" name="abm_rssi_action"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- AUTHORIZED NON-STORMWATER DISCHARGES (NSWDs) -->
+    <h2>Authorized Non-Stormwater Discharges (NSWDs)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Discharge Type</th>
+                <th>Present?</th>
+                <th>Flow Rate</th>
+                <th>Clear?</th>
+                <th>Source</th>
+                <th>Containment Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Potable Water</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="pw_yes" name="pw_present" value="Yes">
+                        <label for="pw_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pw_no" name="pw_present" value="No" checked>
+                        <label for="pw_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="pw_flowrate" placeholder="Flow Rate"></td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="pw_clear_yes" name="pw_clear" value="Yes">
+                        <label for="pw_clear_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="pw_clear_no" name="pw_clear" value="No" checked>
+                        <label for="pw_clear_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="pw_source" placeholder="Source"></td>
+                <td><input type="text" name="pw_containment" placeholder="Containment Method"></td>
+            </tr>
+            <tr>
+                <td>HVAC Condensate</td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="hvac_yes" name="hvac_present" value="Yes">
+                        <label for="hvac_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="hvac_no" name="hvac_present" value="No" checked>
+                        <label for="hvac_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="hvac_flowrate" placeholder="Flow Rate"></td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="hvac_clear_yes" name="hvac_clear" value="Yes">
+                        <label for="hvac_clear_yes">Y</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="hvac_clear_no" name="hvac_clear" value="No" checked>
+                        <label for="hvac_clear_no">N</label>
+                    </div>
+                </td>
+                <td><input type="text" name="hvac_source" placeholder="Source"></td>
+                <td><input type="text" name="hvac_containment" placeholder="Containment Method"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DOCUMENTATION OF FINDINGS -->
+    <h2>Documentation of Findings</h2>
+    <p>
+        <label for="immediateActions">Immediate Actions Taken:</label><br>
+        <textarea id="immediateActions" name="immediateActions" rows="3" cols="60"></textarea>
+    </p>
+    <p>
+        <label for="followUpActions">Follow-up Actions Required:</label><br>
+        <textarea id="followUpActions" name="followUpActions" rows="3" cols="60"></textarea>
+    </p>
+    <p>
+        <label for="swpppUpdates">SWPPP Updates Needed?</label>
+        <div class="radio-group">
+            <input type="radio" id="swppp_yes" name="swppp_updates" value="Yes">
+            <label for="swppp_yes">Yes</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="swppp_no" name="swppp_updates" value="No" checked>
+            <label for="swppp_no">No</label>
+        </div>
+    </p>
+    <p>
+        <label for="additionalTraining">Additional Training Needed?</label>
+        <div class="radio-group">
+            <input type="radio" id="training_yes" name="additional_training" value="Yes">
+            <label for="training_yes">Yes</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="training_no" name="additional_training" value="No" checked>
+            <label for="training_no">No</label>
+        </div>
+    </p>
+
+    <!-- CERTIFICATION -->
+    <h2>Certification</h2>
+    <p>
+        I certify under penalty of law that this document and all attachments were prepared under my direction or 
+        supervision in accordance with a system designed to ensure that qualified personnel properly gather and evaluate 
+        the information submitted. Based on my inquiry of the person or persons who manage the system, or those persons 
+        directly responsible for gathering the information, the information submitted is, to the best of my knowledge and 
+        belief, true, accurate, and complete. I am aware that there are significant penalties for submitting false 
+        information, including the possibility of fine and imprisonment for knowing violations.
+    </p>
+
+    <p>
+        <label for="inspectorSignature">Inspector Signature:</label><br>
+        <input type="text" id="inspectorSignature" name="inspectorSignature" placeholder="Sign or type name">
+        &nbsp;&nbsp;
+        <label for="inspectorSignatureDate">Date:</label>
+        <input type="date" id="inspectorSignatureDate" name="inspectorSignatureDate">
+    </p>
+
+    <p>
+        <label for="pptLeadSignature">PPT Lead Signature:</label><br>
+        <input type="text" id="pptLeadSignature" name="pptLeadSignature" placeholder="Sign or type name">
+        &nbsp;&nbsp;
+        <label for="pptLeadSignatureDate">Date:</label>
+        <input type="date" id="pptLeadSignatureDate" name="pptLeadSignatureDate">
+    </p>
+
+    <p>
+        <!-- Submit button (optional) -->
+        <input type="submit" value="Submit Form">
+    </p>
+</form>
+
+</body>
+</html>
